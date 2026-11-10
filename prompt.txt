@@ -1,0 +1,14 @@
+帮我开发一个Streamlit营销数据分析工具，读取marketing_data.csv，字段：brand、product、price、rating、sales。
+第一阶段先实现：CSV上传组件 + 字段校验：必须检查brand、price、rating三个字段，如果缺失，页面给出清晰提示。
+输出app.py代码，代码注释写清楚。
+生成csv文件，文件名normal.csv，表头：brand,product,price,rating,sales
+写5条模拟营销数据，数据合理，不要空值，直接输出csv文本
+帮我生成marketing_data.csv测试文件，字段包含brand,price,rating,product，有多条不同品牌的数据，导出csv格式，用来测试这个streamlit工具
+再生成一个测试用csv，字段去掉rating，其他保留，用来测试缺失必填列的报错
+帮我生成 null_value.csv 测试文件，字段包含 brand,product,price,rating,sales，有多条不同品牌的数据，部分rating、sales为空，导出csv格式，用来测试这个streamlit工具
+在刚才这份营销数据分析Streamlit代码基础上升级，保留原有CSV上传、brand/price/rating字段校验功能。新增功能：
+1. 按brand分组，计算每个品牌price、rating的平均值，空值不参与计算
+2. 绘制柱状图展示各品牌平均rating
+3. 增加品牌下拉筛选框，筛选后只展示选中品牌数据，筛选仅改变视图，不修改原始上传文件
+4. 兼容存在空值的CSV，程序不会崩溃
+   输出完整app.py，注释清晰
