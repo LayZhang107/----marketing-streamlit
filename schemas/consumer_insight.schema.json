@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ConsumerInsight",
+  "type": "object",
+  "required": [
+    "review_id",
+    "sentiment",
+    "need",
+    "pain_point",
+    "scenario",
+    "purchase_barrier",
+    "evidence",
+    "confidence"
+  ],
+  "properties": {
+    "review_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sentiment": {
+      "enum": [
+        "positive",
+        "neutral",
+        "negative",
+        "mixed",
+        "unknown"
+      ]
+    },
+    "need": {
+      "enum": [
+        "降噪",
+        "佩戴舒适",
+        "续航",
+        "音质",
+        "通话",
+        "连接稳定",
+        "便携",
+        "性价比",
+        "外观",
+        "unknown"
+      ]
+    },
+    "pain_point": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scenario": {
+      "enum": [
+        "通勤",
+        "学习",
+        "办公",
+        "运动",
+        "旅行",
+        "通话",
+        "居家",
+        "unknown"
+      ]
+    },
+    "purchase_barrier": {
+      "enum": [
+        "价格",
+        "舒适度担忧",
+        "质量担忧",
+        "功能不足",
+        "售后担忧",
+        "无",
+        "unknown"
+      ]
+    },
+    "evidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
